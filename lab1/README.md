@@ -1,7 +1,7 @@
 # Laboratorium 1
 
-1. Watek a proces
-2. Watki w javie
+### 1. Watek a proces
+### 2. [Watki w javie](http://download.oracle.com/javase/tutorial/essential/concurrency/index.html)
 
 - wbudowane w jezyk
 - dwa rodzaje implementacji
@@ -51,20 +51,20 @@ t.start();
 ```
 
 - metoda run()
--  klasa Thread -- konstruktory i metody
+-  klasa Thread -- [konstruktory i metody](http://download.oracle.com/javase/10/docs/api/java/lang/Thread.html)
 -  Cykl zycia watku, stany watku
 
-3. Podstawowe mechanizmy synchronizacji wbudowane w jezyk monitory zwiazane z obiektem,
+### 3. Podstawowe mechanizmy synchronizacji wbudowane w jezyk [monitory](https://home.agh.edu.pl/~kzajac/dydakt/tw/lab1/monitory.html) zwiazane z obiektem,
     slowo kluczowe synchronized, metody wait oraz notify
 
-4. Wyscig
+### 4. Wyscig
 - wiecej niz jeden watek korzysta jednoczenie z zasobu dzielonego, przy czym co najmniej jeden probuje go zmienic
 - przyczyna niedeterministycznego zachowania sie programu
 - moze prowadzic do trudnych do wykrycia bledow
 - pojecie thread-safety (bezpieczestwo dla watkow)
 
-5. Animowane watki
-6. Zadanie
+### 5. [Animowane watki](http://sourceforge.net/projects/javaconcurrenta/)
+### 6. Zadanie
   - Napisac program BEZ SYNCHRONIZACJI, w ktorym mamy obiekt klasy Counter
     przechowywujący pewną zmienną całkowitą oraz dwie metody inkrementującą i
     dekrementującą.
@@ -74,10 +74,10 @@ t.start();
   
   - Wprowadzić synchronizację do programu wykorzystujac slowo kluczowe "synchronized"  (1 pkt)
 
-  - Mamy klika procesów produkujacych wiadomosci (szkielet kodu) i kilka konsumujacych
-  wiadomosci (szkielet kodu) do/z jednoelementowego bufora. Zadaniem jest napisanie klasy
+  - Mamy klika procesów produkujacych wiadomosci [(szkielet kodu)](https://home.agh.edu.pl/~kzajac/dydakt/tw/lab1/Prod_szkielet.txt) i kilka konsumujacych
+  wiadomosci [(szkielet kodu)](https://home.agh.edu.pl/~kzajac/dydakt/tw/lab1/Cons_szkielet.txt) do/z jednoelementowego bufora. Zadaniem jest napisanie klasy
   Buffer z metodami put i take, tak, aby dostep byl synchronizowany uzywajac monitora Javy
-   dla obiektu klasy Bu�er. Kazda wiadomosc jest produkowana przez jednego producenta i
+   dla obiektu klasy Buffer. Kazda wiadomosc jest produkowana przez jednego producenta i
    konsumowana przez jednego, dowolnego konsumenta. (1 pkt)
    
   - wyjasnij, dlaczego przy sprawdzaniu warunku czy bufor jest pusty/pelny nalezy uzyc
