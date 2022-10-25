@@ -16,14 +16,14 @@ AGH WIET course introduces abstract models of concurrent processing and applied 
 
 ## List
 
-1. [Thread](lab_1)
-2. [Semaphore](lab_2)
-3. [Monitor](lab_3)
-4. [TODO](lab_4)
-5. [TODO](lab_5)
-6. [TODO](lab_6)
-7. [TODO](lab_7)
-8. [TODO](lab_8)
+1. [Thread](lab1)
+2. [Semaphore](lab2)
+3. [Monitor](lab3)
+4. [TODO](lab4)
+5. [TODO](lab5)
+6. [TODO](lab6)
+7. [TODO](lab7)
+8. [TODO](lab8)
 
 ## Authors
 
