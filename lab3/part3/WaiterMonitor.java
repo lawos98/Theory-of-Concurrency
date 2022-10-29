@@ -2,8 +2,6 @@ package lab3.part3;
 
 
 import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -11,13 +9,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 public class WaiterMonitor {
     final private Lock lock = new ReentrantLock();
-
     final private Condition waitForPair  = lock.newCondition();
-    final private Condition waitForTable = lock.newCondition();
-
-    private final Queue<Integer> queueToTable = new LinkedList<>();
+    final private Condition waitForFreeTable = lock.newCondition();
     private final Set<Integer> waitingClientsForPair = new HashSet<>();
-
     private int slots=0;
     public void orderTable(int PairNumber) throws InterruptedException {
         lock.lock();
@@ -29,9 +23,8 @@ public class WaiterMonitor {
                 }
             }
             else {
-                queueToTable.add(PairNumber);
-                while (queueToTable.element() != PairNumber) {
-                    waitForTable.await();
+                while (slots != 0) {
+                    waitForFreeTable.await();
                 }
                 waitingClientsForPair.remove(PairNumber);
                 slots=2;
@@ -42,14 +35,12 @@ public class WaiterMonitor {
         }
     }
 
-    public void freeTable() throws Exception {
+    public void freeTable(){
         lock.lock();
         try {
             slots-=1;
-            if(slots==0) {
-                int x = queueToTable.element();
-                queueToTable.remove(x);
-                waitForTable.signal();
+            if(slots==0){
+                waitForFreeTable.signal();
             }
         } finally {
             lock.unlock();
