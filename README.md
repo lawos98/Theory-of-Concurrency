@@ -10,8 +10,7 @@ AGH WIET course introduces abstract models of concurrent processing and applied 
 
 <h3 align="left">Languages and Tools:</h3>
 <p align="center">
-<img height="60" src="https://cdn.freebiesupply.com/logos/large/2x/logo-javascript-logo-png-transparent.png" />
-<img height="60" src="https://cdn.dribbble.com/users/122342/screenshots/1071387/threejs.png" />
+<img height="60" src="https://logos-marques.com/wp-content/uploads/2021/03/Java-Logo.png" />
 </p>
 
 ## List
