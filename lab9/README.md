@@ -50,3 +50,32 @@ Sieć nie posiada niezmienników tranzycji, co sugeruje, że nie jest ona odwrac
 </div>
 
 Graf osiągalności potwierdza, że nie jest odwracalna ani żywa ponieważ powstaje zakleszczenie po trafieniu do S3.
+
+## Zadanie 3
+zasymulowac wzajemne wykluczanie dwoch procesow na wspolnym zasobie. Dokonac analizy niezmiennikow miejsc oraz wyjasnic znaczenie rownan (P-invariant equations). Ktore rownanie pokazuje dzialanie ochrony sekcji krytycznej ?
+
+<div align="center">
+<img width="500px" src="/lab9/assets/graph3-1.gif">
+</div>
+
+1. Na początku  umożliwiamy udostępnienie zasobu jednemu z dwóch procesów. 
+2. W zależności od wyboru można wykonać tylko 1 tranzycję (zajęciu zasobu przez jeden proces)
+3. Następnie drugi proces oczekiwaniu na zwolnienie.
+4. Cały proces się powtarza
+
+### Analiza niezmienników:
+
+<div align="center">
+<img width="500px" src="/lab9/assets/graph3-2.png">
+</div>
+
+Działanie ochrony sekcji krytycznej :
+**M(P1) + M(P2) + M(P3) = 1**
+Pokazuje, że zasób może być tylko w trzech stanach
+* Dostępny dla obu procesów
+* Dostępny dla pierszego procesu
+* Dostępny dla drugiego procesu
+
+Pozostałe dwa równanaia informują nas o stanie znajdowania się w sekcji krytycznej i poza nią
+
+
