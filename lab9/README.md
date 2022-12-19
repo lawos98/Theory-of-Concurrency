@@ -1,7 +1,7 @@
 ## Zadanie 1 
 Wymyslic wlasna maszyne stanow (maszyna stanow jest modelowana przez sieć Petri, w której każda tranzycja ma dokładnie jedno miejsce wejściowe i jedno miejsce wyjściowe), zasymulowac przyklad i dokonac analizy grafu osiagalnosci oraz niezmiennikow
 
-### Wymyślona maszyna stanów:
+### Sieć:
 
 <div align="center">
 <img width="500px" src="/lab9/assets/graph1-1.gif">
@@ -29,6 +29,8 @@ Graf osiągalności jest silnie spójny, z tego wynika, że sieć ta jest odwrac
 Zasymulowac siec jak ponizej.
 Dokonac analizy niezmiennikow przejsc. Jaki wniosek mozna wyciagnac o odwracalnosci sieci ? Wygenerowac graf osiagalnosci. Prosze wywnioskowac z grafu, czy siec jest zywa. Prosze wywnioskowac czy jest ograniczona. Objasnic wniosek.
 
+### Sieć:
+
 <div align="center">
 <img width="500px" src="/lab9/assets/graph2-1.gif">
 </div>
@@ -54,6 +56,8 @@ Graf osiągalności potwierdza, że nie jest odwracalna ani żywa ponieważ pows
 ## Zadanie 3
 zasymulowac wzajemne wykluczanie dwoch procesow na wspolnym zasobie. Dokonac analizy niezmiennikow miejsc oraz wyjasnic znaczenie rownan (P-invariant equations). Ktore rownanie pokazuje dzialanie ochrony sekcji krytycznej ?
 
+### Sieć:
+
 <div align="center">
 <img width="500px" src="/lab9/assets/graph3-1.gif">
 </div>
@@ -61,7 +65,7 @@ zasymulowac wzajemne wykluczanie dwoch procesow na wspolnym zasobie. Dokonac ana
 1. Na początku  umożliwiamy udostępnienie zasobu jednemu z dwóch procesów. 
 2. W zależności od wyboru można wykonać tylko 1 tranzycję (zajęciu zasobu przez jeden proces)
 3. Następnie drugi proces oczekiwaniu na zwolnienie.
-4. Cały proces się powtarza
+4. Cały proces powtarza się.
 
 ### Analiza niezmienników:
 
@@ -78,4 +82,24 @@ Pokazuje, że zasób może być tylko w trzech stanach
 
 Pozostałe dwa równanaia informują nas o stanie znajdowania się w sekcji krytycznej i poza nią
 
+## Zadanie 4 
+Uruchomic problem producenta i konsumenta z ograniczonem buforem (mozna posluzyc sie przykladem, menu:file, examples). Dokonac analizy niezmiennikow. Czy siec jest zachowawcza ? Ktore rownanie mowi nam o rozmiarze bufora ?
 
+### Sieć:
+
+<div align="center">
+<img width="500px" src="/lab9/assets/graph4-1.gif">
+</div>
+
+### Analiza niezmienników:
+
+<div align="center">
+<img width="500px" src="/lab9/assets/graph4-2.png">
+</div>
+
+O rozmiarze bufora informuje nas równanie:
+**M(P6) + M(P7) = 3**
+* 𝑃7 przechowuje liczbę miejsc wolnych w buforze. 
+* 𝑃6 przechowuje liczbę miejsc zajętych w buforze.
+
+Sieć jest zachowawcza gdyż każda tranzycja ma tyle samo miejsc wejściowych co wyjściowych.
