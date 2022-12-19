@@ -122,3 +122,26 @@ Można zaobserować że po każdej tranzycji T0 ( Producent) liczba znaczników 
 </div>
 
 Sieć nie jest pokryta całkowicie niezmienikami miejsc, a dokładnie brakuje miejsca P6, które to jest nieskończonym buforem. Z tego powodu nie wiemy czy sięć jest ograniczona , lecz przez obserwacje działania sieci dowiadujemy się że nie jest ona ograniczona.
+
+## Zadanie 6
+Zasymulowac prosty przyklad ilustrujacy zakleszczenie. Wygenerowac graf osiagalnosci i zaobserwowac znakowania, z ktoroch nie mozna wykonac przejsc. Zaobserwowac wlasciwosci sieci w "State Space Analysis". Ponizej przyklad sieci z mozliwoscia zakleszczenia (mozna wymyslic inny):
+
+### Sieć:
+
+<div align="center">
+<img width="500px" src="/lab9/assets/graph6-1.gif">
+</div>
+
+### Graf osiągalności:
+
+<div align="center">
+<img width="500px" src="/lab9/assets/graph6-2.png">
+</div>
+
+### State Space Analysis:
+
+<div align="center">
+<img width="500px" src="/lab9/assets/graph6-3.png">
+</div>
+
+
