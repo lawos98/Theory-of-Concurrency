@@ -99,7 +99,26 @@ Uruchomic problem producenta i konsumenta z ograniczonem buforem (mozna posluzyc
 
 O rozmiarze bufora informuje nas równanie:
 **M(P6) + M(P7) = 3**
-* 𝑃7 przechowuje liczbę miejsc wolnych w buforze. 
-* 𝑃6 przechowuje liczbę miejsc zajętych w buforze.
+* P7 przechowuje liczbę miejsc wolnych w buforze. 
+* P6 przechowuje liczbę miejsc zajętych w buforze.
 
 Sieć jest zachowawcza gdyż każda tranzycja ma tyle samo miejsc wejściowych co wyjściowych.
+
+## Zadanie 5
+Stworzyc symulacje problemu producenta i konsumenta z nieograniczonym buforem. Dokonac analizy niezmiennikow. Zaobserwowac brak pelnego pokrycia miejsc.
+
+### Sieć:
+
+<div align="center">
+<img width="500px" src="/lab9/assets/graph5-1.gif">
+</div>
+
+Można zaobserować że po każdej tranzycji T0 ( Producent) liczba znaczników w miejscu P6 rosła o 1, natomiast po T1 (Konsument) malała o 1
+
+### Analiza niezmienników:
+
+<div align="center">
+<img width="500px" src="/lab9/assets/graph5-2.png">
+</div>
+
+Sieć nie jest pokryta całkowicie niezmienikami miejsc, a dokładnie brakuje miejsca P6, które to jest nieskończonym buforem. Z tego powodu nie wiemy czy sięć jest ograniczona , lecz przez obserwacje działania sieci dowiadujemy się że nie jest ona ograniczona.
