@@ -1,0 +1,16 @@
+{
+  "name": "concurrency",
+  "version": "1.0.0",
+  "main": "lab6/loop.js",
+  "scripts": {
+    "start": "node lab6/loop.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "async": "^3.2.4",
+    "scatter-chart-simple": "^0.0.11"
+  }
+}
