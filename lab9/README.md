@@ -13,8 +13,9 @@ Wymyslic wlasna maszyne stanow (maszyna stanow jest modelowana przez sieć Petri
 <img width="500px" src="/lab9/assets/graph1-3.png">
 </div>
 
-Sieć jest pokryta przez pozytywne niezmienniki miejsc, z czego wynika, że jest ograniczona.
-Wszystkie niezmienniki tranzycji są dodatnie, więc sieć może być też żywa.
+* Sieć jest pokryta przez pozytywne niezmienniki miejsc, z czego wynika, że jest ograniczona.
+* Wszystkie niezmienniki tranzycji są dodatnie, więc sieć może być też żywa.
+* Suma wszystkich markowań jest stale równa jeden ,wiec sieć jest bezpieczna
 
 
 ### Graf osiągalności:
@@ -41,8 +42,8 @@ Dokonac analizy niezmiennikow przejsc. Jaki wniosek mozna wyciagnac o odwracalno
 <img width="500px" src="/lab9/assets/graph2-3.png">
 </div>
 
-Sieć nie ma niezmienników przejść, co za tym idzie nie wiemy czy jest ograniczona i żywa.
-Sieć nie posiada niezmienników tranzycji, co sugeruje, że nie jest ona odwracalna.
+* Sieć nie ma niezmienników przejść, co za tym idzie nie wiemy czy jest ograniczona i żywa.
+* Sieć nie posiada niezmienników tranzycji, co sugeruje, że nie jest ona odwracalna.
 
 
 ### Graf osiągalności:
@@ -52,6 +53,7 @@ Sieć nie posiada niezmienników tranzycji, co sugeruje, że nie jest ona odwrac
 </div>
 
 Graf osiągalności potwierdza, że nie jest odwracalna ani żywa ponieważ powstaje zakleszczenie po trafieniu do S3.
+Z uwagi że nie ma miejsca dla którego liczba znaczników może rosnąć do nieskończoności sieć jest ograniczona. 
 
 ## Zadanie 3
 zasymulowac wzajemne wykluczanie dwoch procesow na wspolnym zasobie. Dokonac analizy niezmiennikow miejsc oraz wyjasnic znaczenie rownan (P-invariant equations). Ktore rownanie pokazuje dzialanie ochrony sekcji krytycznej ?
@@ -64,7 +66,7 @@ zasymulowac wzajemne wykluczanie dwoch procesow na wspolnym zasobie. Dokonac ana
 
 1. Na początku  umożliwiamy udostępnienie zasobu jednemu z dwóch procesów. 
 2. W zależności od wyboru można wykonać tylko 1 tranzycję (zajęciu zasobu przez jeden proces)
-3. Następnie drugi proces oczekiwaniu na zwolnienie.
+3. Następnie drugi proces oczekuje na zwolnienie.
 4. Cały proces powtarza się.
 
 ### Analiza niezmienników:
@@ -74,7 +76,7 @@ zasymulowac wzajemne wykluczanie dwoch procesow na wspolnym zasobie. Dokonac ana
 </div>
 
 Działanie ochrony sekcji krytycznej :
-**M(P1) + M(P2) + M(P3) = 1**
+**M(P0) + M(P2) + M(P4) = 1**
 Pokazuje, że zasób może być tylko w trzech stanach
 * Dostępny dla obu procesów
 * Dostępny dla pierszego procesu
