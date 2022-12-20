@@ -138,10 +138,16 @@ Zasymulowac prosty przyklad ilustrujacy zakleszczenie. Wygenerowac graf osiagaln
 <img width="500px" src="/lab9/assets/graph6-2.png">
 </div>
 
+Zakleszczenie powstaje po trafieniu do S6 albo S7.
+
+
 ### State Space Analysis:
 
 <div align="center">
 <img width="500px" src="/lab9/assets/graph6-3.png">
 </div>
+
+W stworzonej sieci wszystkie miejsca mogą posiadać maksymalnie jeden znacznik a wieć sieć jest 1-ograniczonona ,co za tym idzie bezpieczna 
+Sieć również potwierdza możliwośc zakleszczenia tak jak pokazano powyżej.
 
 
