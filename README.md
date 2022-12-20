@@ -23,6 +23,8 @@ AGH WIET course introduces abstract models of concurrent processing and applied 
 6. [TODO](lab6)
 7. [TODO](lab7)
 8. [TODO](lab8)
+9. [Petri](lab9)
+10.[Kotlin Coroutines](lab10) 
 
 ## Authors
 
